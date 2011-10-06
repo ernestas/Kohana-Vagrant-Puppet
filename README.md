@@ -15,6 +15,7 @@ Here you have 2 options:
 ### 2. Build Kohana box
 
     git clone https://github.com/ernestas/Kohana-Vagrant-Puppet.git && cd Kohana-Vagrant-Puppet
+    git submodule update --init
     vagrant up && vagrant provision
     vagrant package --vagrantfile Vagrantfile.pkg --output vagrant-ubuntu-10.04.3-server-i386-kohana.box
     vagrant box add vagrant-ubuntu-10.04.3-server-i386-kohana vagrant-ubuntu-10.04.3-server-i386-kohana.box
@@ -29,6 +30,6 @@ In your Kohana project's directory initialize vagrant:
 
 It assumes that `index.php` is in `public` directory. To test the box you can:
 
-    git clone https://github.com/kohana/kohana/tree/3.2/master public
+	git clone https://github.com/kohana/kohana.git public && cd public && git submodule update --init
 
 and see localhost:8080
