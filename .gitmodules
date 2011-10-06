@@ -1,0 +1,18 @@
+[submodule "modules/php"]
+	path = modules/php
+	url = https://github.com/vurbia/puppet-php.git
+[submodule "modules/apache"]
+	path = modules/apache
+	url = https://github.com/vurbia/puppet-apache.git
+[submodule "modules/concat"]
+	path = modules/concat
+	url = https://github.com/ripienaar/puppet-concat.git
+[submodule "modules/augeas"]
+	path = modules/augeas
+	url = https://github.com/vurbia/puppet-augeas.git
+[submodule "modules/mysql"]
+	path = modules/mysql
+	url = https://github.com/vurbia/puppet-mysql.git
+[submodule "modules/logrotate"]
+	path = modules/logrotate
+	url = https://github.com/vurbia/puppet-logrotate.git
