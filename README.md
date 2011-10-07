@@ -33,3 +33,21 @@ It assumes that `index.php` is in `public` directory. To test the box you can:
 	git clone https://github.com/kohana/kohana.git public && cd public && git submodule update --init
 
 and see localhost:8080
+
+## Database config
+
+	'default' => array
+	(
+		'type'       => 'mysql',
+		'connection' => array(
+			'hostname'   => 'localhost',
+			'database'   => 'kohana',
+			'username'   => 'kohana',
+			'password'   => 'kohana',
+			'persistent' => FALSE,
+		),
+		'table_prefix' => '',
+		'charset'      => 'utf8',
+		'caching'      => FALSE,
+		'profiling'    => TRUE,
+	),
