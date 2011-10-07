@@ -19,13 +19,12 @@ Here you have 3 options:
     git submodule update --init
     vagrant up && vagrant provision
     vagrant package --vagrantfile Vagrantfile.pkg --output vagrant-ubuntu-10.04.3-server-i386-kohana.box
-    vagrant box add vagrant-ubuntu-10.04.3-server-i386-kohana vagrant-ubuntu-10.04.3-server-i386-kohana.box
 
-
-### 3. Use/distribute the built box
+### 3. Use the built box
 
 In your Kohana project's directory initialize vagrant:
 
+    vagrant box add vagrant-ubuntu-10.04.3-server-i386-kohana vagrant-ubuntu-10.04.3-server-i386-kohana.box
     vagrant init vagrant-ubuntu-10.04.3-server-i386-kohana
     vagrant up
 
