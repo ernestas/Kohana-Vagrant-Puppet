@@ -6,11 +6,12 @@ Sets up a distributable Vagrant box for Kohana. Uses Puppet provisioning.
 
 ### 1. Add Ubuntu base box to Vagrant
 
-Here you have 2 options:
+Here you have 3 options:
 
 * Build one yourself with [veewee](https://github.com/jedi4ever/veewee) using [Kohana-Veewee-Template](http://github.com/ernestas/Kohana-Veewee-Template)
 * Or use my prebuild box (do it at your own risk):
     * `vagrant box add vagrant-ubuntu-10.04.3-server-i386 http://dl.dropbox.com/u/8700442/vagrant-ubuntu-10.04.3-server-i386.box`
+* Or install `libaugeas-ruby` to your base box. Puppet manifests use it.
 
 ### 2. Build Kohana box
 
