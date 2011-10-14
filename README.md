@@ -38,7 +38,7 @@ Here you have 3 options:
 git clone https://github.com/ernestas/Kohana-Vagrant-Puppet.git && cd Kohana-Vagrant-Puppet
 git submodule update --init
 vagrant up && vagrant provision
-vagrant package --vagrantfile Vagrantfile.pkg --output vagrant-ubuntu-10.04.3-server-i386-kohana.box
+vagrant package --vagrantfile Vagrantfile.pkg --output 'vagrant-ubuntu-10.04.3-server-i386-kohana.box'
 `````
 
 ### 3. Use/distribute the built box
@@ -46,13 +46,13 @@ vagrant package --vagrantfile Vagrantfile.pkg --output vagrant-ubuntu-10.04.3-se
 Add the built box:
 
 ````` bash
-vagrant box add vagrant-ubuntu-10.04.3-server-i386-kohana vagrant-ubuntu-10.04.3-server-i386-kohana.box
+vagrant box add 'vagrant-ubuntu-10.04.3-server-i386-kohana' 'vagrant-ubuntu-10.04.3-server-i386-kohana.box'
 `````
 
 In your Kohana project's directory initialize vagrant:
 
 ````` bash
-vagrant init vagrant-ubuntu-10.04.3-server-i386-kohana
+vagrant init 'vagrant-ubuntu-10.04.3-server-i386-kohana'
 vagrant up
 `````
 
