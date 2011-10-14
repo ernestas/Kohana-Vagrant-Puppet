@@ -61,6 +61,8 @@ and see localhost:8080
 ## Database config
 
 ~~~ php
+<?php defined('SYSPATH') or die('No direct access allowed.');
+
 return array
 (
 	'default' => array
