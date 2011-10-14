@@ -61,21 +61,24 @@ and see localhost:8080
 ## Database config
 
 ~~~ php
-'default' => array
+return array
 (
-	'type'       => 'mysql',
-	'connection' => array(
-		'hostname'   => 'localhost',
-		'database'   => 'kohana',
-		'username'   => 'kohana',
-		'password'   => 'kohana',
-		'persistent' => FALSE,
+	'default' => array
+	(
+		'type'       => 'mysql',
+		'connection' => array(
+			'hostname'   => 'localhost',
+			'database'   => 'kohana',
+			'username'   => 'kohana',
+			'password'   => 'kohana',
+			'persistent' => FALSE,
+		),
+		'table\_prefix' => '',
+		'charset'      => 'utf8',
+		'caching'      => FALSE,
+		'profiling'    => TRUE,
 	),
-	'table\_prefix' => '',
-	'charset'      => 'utf8',
-	'caching'      => FALSE,
-	'profiling'    => TRUE,
-),
+);
 ~~~
 
 
