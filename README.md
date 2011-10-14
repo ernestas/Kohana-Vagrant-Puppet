@@ -60,21 +60,23 @@ and see localhost:8080
 
 ## Database config
 
-	'default' => array
-	(
-		'type'       => 'mysql',
-		'connection' => array(
-			'hostname'   => 'localhost',
-			'database'   => 'kohana',
-			'username'   => 'kohana',
-			'password'   => 'kohana',
-			'persistent' => FALSE,
-		),
-		'table_prefix' => '',
-		'charset'      => 'utf8',
-		'caching'      => FALSE,
-		'profiling'    => TRUE,
+```php
+'default' => array
+(
+	'type'       => 'mysql',
+	'connection' => array(
+		'hostname'   => 'localhost',
+		'database'   => 'kohana',
+		'username'   => 'kohana',
+		'password'   => 'kohana',
+		'persistent' => FALSE,
 	),
+	'table_prefix' => '',
+	'charset'      => 'utf8',
+	'caching'      => FALSE,
+	'profiling'    => TRUE,
+),
+```
 
 ## CLI commands
 
@@ -86,8 +88,10 @@ In your `~/.ssh/config` if Vagrant added `Host default` rename it to `Host vagra
 
 Example of bash script that you can add to your project:
 
+```shell
 	#!/bin/bash
 	ssh vagrant "phpcs --standard=Kohana /vagrant/$@"
+```
 
 Run it with:
 
