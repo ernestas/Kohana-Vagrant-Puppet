@@ -89,7 +89,7 @@ In your `~/.ssh/config` if Vagrant added `Host default` rename it to `Host vagra
 
 Example of bash script that you can add to your project:
 
-~~~ shell
+~~~ bash
 #!/bin/bash
 ssh vagrant "phpcs --standard=Kohana /vagrant/$@"
 ~~~
