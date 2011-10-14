@@ -34,33 +34,41 @@ Here you have 3 options:
 
 ### 2. Build Kohana box
 
-    git clone https://github.com/ernestas/Kohana-Vagrant-Puppet.git && cd Kohana-Vagrant-Puppet
-    git submodule update --init
-    vagrant up && vagrant provision
-    vagrant package --vagrantfile Vagrantfile.pkg --output vagrant-ubuntu-10.04.3-server-i386-kohana.box
+````` bash
+git clone https://github.com/ernestas/Kohana-Vagrant-Puppet.git && cd Kohana-Vagrant-Puppet
+git submodule update --init
+vagrant up && vagrant provision
+vagrant package --vagrantfile Vagrantfile.pkg --output vagrant-ubuntu-10.04.3-server-i386-kohana.box
+`````
 
 ### 3. Use/distribute the built box
 
 Add the built box:
 
-    vagrant box add vagrant-ubuntu-10.04.3-server-i386-kohana vagrant-ubuntu-10.04.3-server-i386-kohana.box
+````` bash
+vagrant box add vagrant-ubuntu-10.04.3-server-i386-kohana vagrant-ubuntu-10.04.3-server-i386-kohana.box
+`````
 
 In your Kohana project's directory initialize vagrant:
 
-    vagrant init vagrant-ubuntu-10.04.3-server-i386-kohana
-    vagrant up
+````` bash
+vagrant init vagrant-ubuntu-10.04.3-server-i386-kohana
+vagrant up
+`````
 
 ### 4. Test
 
 It assumes that `index.php` is in `public` directory. To test the box you can:
 
-	git clone https://github.com/kohana/kohana.git public && cd public && git submodule update --init
+````` bash
+git clone https://github.com/kohana/kohana.git public && cd public && git submodule update --init
+`````
 
 and see localhost:8080
 
 ## Database config
 
-~~~ php
+````` php
 <?php defined('SYSPATH') or die('No direct access allowed.');
 
 return array
@@ -75,30 +83,34 @@ return array
 			'password'   => 'kohana',
 			'persistent' => FALSE,
 		),
-		'table\_prefix' => '',
+		'table_prefix' => '',
 		'charset'      => 'utf8',
 		'caching'      => FALSE,
 		'profiling'    => TRUE,
 	),
 );
-~~~
+`````
 
 
 ## CLI commands
 
 To easily run CLI commands in the vagrant box from your Kohana project's directory:
 
-	vagrant ssh_config > ~/.ssh/config
+````` bash
+vagrant ssh_config > ~/.ssh/config
+`````
 
 In your `~/.ssh/config` if Vagrant added `Host default` rename it to `Host vagrant`.
 
 Example of bash script that you can add to your project:
 
-~~~ bash
+````` bash
 #!/bin/bash
 ssh vagrant "phpcs --standard=Kohana /vagrant/$@"
-~~~
+`````
 
 Run it with:
 
-	./phpcs application/
+````` bash
+./phpcs application/
+`````
